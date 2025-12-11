@@ -1,0 +1,140 @@
+:root{
+    --app-corner: 20px; 
+    /*köşelerin keskin değil de oval olmasını istiyoruz. 
+    Bu değeri birçak yerde kullandığımız için global değişken olarak tanımladık.*/
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.todo_container{
+    position: relative;
+    width: 375px;
+    height: 812px;
+    border-radius: var(--app-corner);
+    box-shadow: 5px 5px 15px #dedede;
+}
+
+.todo_header {
+    position: relative;
+    background-image: url("./img/background.svg");
+    background-size: cover;
+    background-position: center;
+    height: 812px;
+    width: 375px;
+    border-radius: var(--app-corner);
+}
+.todo_title{
+    color: #535983;
+    font-size: 36px;
+    position: relative;
+    font-weight: bold;
+    left: 100px;
+    top: 50px;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.todo_insert-icon{
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: transform 500ms ease-in;
+}
+
+.todo_insert-icon:hover{
+    transform: rotate(360deg);
+}
+
+.todo_list{
+    list-style: none;
+    padding: 0;
+    margin-top: 10px; /* ister artır, ister azalt */
+    position: absolute;
+    top: 250px;
+    width: 38%;
+    
+}
+
+.none-todos{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: #2e4455;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+.todo_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    width: 375px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.todo_complete{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #00000070;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.todo_info{
+    flex-grow: 1;
+    margin: 0 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.todo_delete-icon{
+    height: 30px;
+    width: 30px;
+    flex-shrink: 0;
+}
+
+.todo_info-title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.todo_info-desc{
+    display: block;
+    width: 250px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+.todo_item-complete {
+    
+    background-color: #71707b57;
+    width: 375px;
+}
+
+.todo_item-complete .todo_complete{
+    
+    background-color: #79b6df;
+    border: 1px solid #5a85a5;
+}
+
+.todo_item-complete .todo_info-title{
+    text-decoration: line-through;
+}
