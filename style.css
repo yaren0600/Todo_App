@@ -18,7 +18,8 @@ body{
 }
 
 .todo_header {
-    position: relative;
+    position: absolute;
+    width: inherit;
     background-image: url("./img/background.svg");
     background-size: cover;
     background-position: center;
@@ -137,4 +138,74 @@ body{
 
 .todo_item-complete .todo_info-title{
     text-decoration: line-through;
+}
+
+.todo_modal{
+    position: relative;
+    display: none;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.288);
+    border-radius: var(--app-corner);
+}
+
+.todo_modal.show{
+    display: flex;
+}
+
+.todo_modal-body{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 250px;
+    background-color: rgba(82, 123, 205, 0.601);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: var(--app-corner);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form_control{
+    background-color: #f3f3f3d8;
+    border: 1px solid black;
+    width: 90%;
+    border-radius: 3px;
+    
+}
+.form_control::placeholder{
+    color: #707070;
+}
+
+.form_control--input{
+    font-size: 24px;
+    height: 40px;
+    margin-top: 500;
+    margin-bottom: 3%;
+
+}
+
+.form_control--textarea{
+    font-size: 24px;
+    height: 100px;
+    margin-bottom: 60px;
+    
+}
+
+.btn_save{
+    position: absolute;
+    width: 92%;
+    background-color: #b1bcc5;
+    border: 1px solid #486b80;
+    font-size: 20px;
+    font-weight: 900;
+    bottom: 20px;
+    border-radius: 3px;
+
+}
+.todo_save-icon{
+    padding-right: 10px;
+    height: 20px;
+    width: 20px;
 }

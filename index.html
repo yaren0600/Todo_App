@@ -14,7 +14,7 @@
             <img class="todo_insert-icon btn" src="./img/insert.svg"/>
         </div>
 <ul class="todo_list">
-   <!-- <li class="todo_item">
+    <li class="todo_item">
         <div class="todo_complete btn"></div>
         <div class="todo_info">
             <span class="todo_info-title">İş 1</span>
@@ -32,10 +32,19 @@
             <span class="todo_info-desc">Açıklama 1</span>
         </div>
         <img class="todo_delete-icon btn" src="./img/delete.svg"/>
-    </li> -->
-    <li class="none-todos">
-        Henüz Yapılacak Bir İş Eklenmedi... </li>
+    </li>
+    <!--<li class="none-todos">
+        Henüz Yapılacak Bir İş Eklenmedi... </li>-->
 </ul>
+<div class="todo_modal show">
+    <div class="todo_modal-body">
+        <input class="form_control form_control--input " type="text" placeholder="Başlık"/>
+        <textarea class="form_control form_control--textarea" placeholder="Açıklama"></textarea>
+        <button class="btn btn_save">
+            <img class="todo_save-icon" src="./img/checked.svg"/>KAYDET
+        </button>
+    </div>
+</div>
 </div>
     
 </body>
