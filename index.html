@@ -11,7 +11,9 @@
     <div class="todo_container">
         <div class="todo_header">
             <span class="todo_title">TODO APP</span>
-            <img class="todo_insert-icon btn" src="./img/insert.svg"/>
+            <img class="todo_insert-icon btn" src="./img/insert.svg"
+            onclick = "toggleModal()" 
+            /><!--onclick metodu + butonuna tıklandığında toggleModal metodunu çağırır.-->
         </div>
 <ul class="todo_list">
     <li class="todo_item">
@@ -36,16 +38,23 @@
     <!--<li class="none-todos">
         Henüz Yapılacak Bir İş Eklenmedi... </li>-->
 </ul>
-<div class="todo_modal show">
+<div class="todo_modal">
     <div class="todo_modal-body">
-        <input class="form_control form_control--input " type="text" placeholder="Başlık"/>
-        <textarea class="form_control form_control--textarea" placeholder="Açıklama"></textarea>
-        <button class="btn btn_save">
+        <input 
+         name="title"
+         class="form_control form_control--input " 
+         type="text"
+         placeholder="Başlık"/>
+        <textarea
+         name="desc"
+         class="form_control form_control--textarea" 
+         placeholder="Açıklama"></textarea>
+        <button class="btn btn_save" onclick="addTodoItems()">
             <img class="todo_save-icon" src="./img/checked.svg"/>KAYDET
         </button>
     </div>
 </div>
 </div>
-    
+<script src="app.js"></script>
 </body>
 </html>
