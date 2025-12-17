@@ -5,56 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo App</title>
     <link rel="stylesheet" href="./style.css">
-
 </head>
+
 <body>
     <div class="todo_container">
         <div class="todo_header">
             <span class="todo_title">TODO APP</span>
-            <img class="todo_insert-icon btn" src="./img/insert.svg"
-            onclick = "toggleModal()" 
-            /><!--onclick metodu + butonuna tıklandığında toggleModal metodunu çağırır.-->
+            <img
+                class="todo_insert-icon btn"
+                src="./img/insert.svg"
+                onclick="toggleModal()"
+            />
+            <!-- onclick metodu + butonuna tıklandığında toggleModal metodunu çağırır -->
         </div>
-<ul class="todo_list">
-    <li class="todo_item">
-        <div class="todo_complete btn"></div>
-        <div class="todo_info">
-            <span class="todo_info-title">İş 1</span>
-            <span class="todo_info-desc">Açıklama 1</span>
-        </div>
-        <img class="todo_delete-icon btn" src="./img/delete.svg"/>
-    </li>
 
-    <li class="todo_item todo_item-complete"> 
-        <div class="todo_complete btn">
-            <img src="./img/checked.svg"/>
+        <ul class="todo_list">
+            <!--
+            <li class="none-todos">
+                Henüz Yapılacak Bir İş Eklenmedi...
+            </li>
+            -->
+        </ul>
+
+        <div class="todo_modal">
+            <form id = "addTodoForm">
+                <div class="todo_modal-body">
+                
+                    <input
+                    name="title"
+                    class="form_control form_control--input"
+                    type="text"
+                    placeholder="Başlık"
+                />
+
+                <textarea
+                name="desc"
+                class="form_control form_control--textarea"
+                placeholder="Açıklama"></textarea>
+
+                <button class="btn btn_save" onclick="addTodoItems()">
+                    <img
+                        class="todo_save-icon"
+                        src="./img/checked.svg"
+                    />
+                    KAYDET
+                </button>
+
+            </div>
+        </form>
         </div>
-        <div class="todo_info">
-            <span class="todo_info-title">İş 1</span>
-            <span class="todo_info-desc">Açıklama 1</span>
-        </div>
-        <img class="todo_delete-icon btn" src="./img/delete.svg"/>
-    </li>
-    <!--<li class="none-todos">
-        Henüz Yapılacak Bir İş Eklenmedi... </li>-->
-</ul>
-<div class="todo_modal">
-    <div class="todo_modal-body">
-        <input 
-         name="title"
-         class="form_control form_control--input " 
-         type="text"
-         placeholder="Başlık"/>
-        <textarea
-         name="desc"
-         class="form_control form_control--textarea" 
-         placeholder="Açıklama"></textarea>
-        <button class="btn btn_save" onclick="addTodoItems()">
-            <img class="todo_save-icon" src="./img/checked.svg"/>KAYDET
-        </button>
     </div>
-</div>
-</div>
-<script src="app.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>

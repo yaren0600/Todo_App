@@ -94,6 +94,12 @@ body{
     align-items: center;
 
 }
+.todo_complete img{
+    display: none;
+}
+.todo__item.complete .todo__complete img{
+  display: flex;
+} 
 
 .todo_info{
     flex-grow: 1;
