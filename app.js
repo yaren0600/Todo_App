@@ -77,7 +77,7 @@ const toggleTodoComplete = (selectedEl) => {
 
     if(toggleItemIndex != -1){
         todoItems[toggleItemIndex].isComplete = !todoItems[toggleItemIndex].isComplete;
-        selectedEl.parentNode.classList.toggle("complete");
+        selectedEl.parentNode.classList.toggle("todo_item-complete");
         saveTodoItemsToLS();
     }
     
